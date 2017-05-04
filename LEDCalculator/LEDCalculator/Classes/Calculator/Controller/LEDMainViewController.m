@@ -7,6 +7,7 @@
 //
 
 #import "LEDMainViewController.h"
+#import "LEDMianView.h"
 
 @interface LEDMainViewController ()
 
@@ -18,20 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImageView *imgView = [[UIImageView alloc] init];
-    imgView.image = [UIImage imageNamed:@"7890D7DE-1967-41A5-9C07-9B28DC56A7D1.png"];
-    [self.view addSubview:imgView];
-    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsZero);
-    }];
+//    UIImageView *imgView = [[UIImageView alloc] init];
+//    imgView.image = [UIImage imageNamed:@"7890D7DE-1967-41A5-9C07-9B28DC56A7D1.png"];
+//    [self.view addSubview:imgView];
+//    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(UIEdgeInsetsZero);
+//    }];
     
-    int a = 0;
-    NSLog(@"%d" , a);
+    LEDMianView *measuerView = [[LEDMianView alloc] init];
+    measuerView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+    [self.view addSubview:measuerView];
     
-    NSLog(@"我擦嘞");
-    
+
     
     
 

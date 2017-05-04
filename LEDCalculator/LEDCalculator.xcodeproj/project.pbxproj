@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		563E94E0803F3F6734AE91DA /* libPods-LEDCalculatorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045AABAD930D979762B243A2 /* libPods-LEDCalculatorTests.a */; };
+		6D61406A1EBB1C7100FD549C /* LEDModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6140691EBB1C7100FD549C /* LEDModelView.m */; };
+		6D61406D1EBB1E6D00FD549C /* LEDSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D61406C1EBB1E6D00FD549C /* LEDSizeView.m */; };
+		6D6140701EBB204D00FD549C /* LEDMianView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D61406F1EBB204D00FD549C /* LEDMianView.m */; };
+		6D6140731EBB2F1400FD549C /* LEDUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6140721EBB2F1400FD549C /* LEDUnitView.m */; };
+		6D6140761EBB2F8100FD549C /* LEDUnitSizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6140751EBB2F8100FD549C /* LEDUnitSizeView.m */; };
+		6D6140791EBB36CD00FD549C /* LEDCycleVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6140781EBB36CD00FD549C /* LEDCycleVIew.m */; };
+		6DB29B481EBAD52C009A05C7 /* LEDMeasureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB29B471EBAD52C009A05C7 /* LEDMeasureView.m */; };
+		6DB29B4B1EBAD8CE009A05C7 /* LEDInpuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB29B4A1EBAD8CE009A05C7 /* LEDInpuView.m */; };
+		6DB29B4D1EBAD8D8009A05C7 /* LEDInpuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DB29B4C1EBAD8D8009A05C7 /* LEDInpuView.xib */; };
 		8C84B4256A387A563DDD151F /* libPods-LEDCalculatorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D49EF24B0B9B61BA207F63 /* libPods-LEDCalculatorUITests.a */; };
 		CBBB5A6DE5D8BBECC207A751 /* libPods-LEDCalculator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FD9CA2370EEE1B6D9F636E /* libPods-LEDCalculator.a */; };
 		F51BF7B81EBA155C0019ACD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51BF7B71EBA155C0019ACD8 /* Assets.xcassets */; };
@@ -57,6 +66,23 @@
 		2DFEF3CA35E3FDD452BC3919 /* Pods-LEDCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculatorTests/Pods-LEDCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57D49EF24B0B9B61BA207F63 /* libPods-LEDCalculatorUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LEDCalculatorUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC68CA7CEBB21DCE5D3DB8E /* Pods-LEDCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculatorUITests/Pods-LEDCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6D6140681EBB1C7100FD549C /* LEDModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDModelView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDModelView.h; sourceTree = SOURCE_ROOT; };
+		6D6140691EBB1C7100FD549C /* LEDModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDModelView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDModelView.m; sourceTree = SOURCE_ROOT; };
+		6D61406B1EBB1E6D00FD549C /* LEDSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDSizeView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDSizeView.h; sourceTree = SOURCE_ROOT; };
+		6D61406C1EBB1E6D00FD549C /* LEDSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDSizeView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDSizeView.m; sourceTree = SOURCE_ROOT; };
+		6D61406E1EBB204D00FD549C /* LEDMianView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDMianView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDMianView.h; sourceTree = SOURCE_ROOT; };
+		6D61406F1EBB204D00FD549C /* LEDMianView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDMianView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDMianView.m; sourceTree = SOURCE_ROOT; };
+		6D6140711EBB2F1400FD549C /* LEDUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDUnitView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDUnitView.h; sourceTree = SOURCE_ROOT; };
+		6D6140721EBB2F1400FD549C /* LEDUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDUnitView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDUnitView.m; sourceTree = SOURCE_ROOT; };
+		6D6140741EBB2F8100FD549C /* LEDUnitSizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDUnitSizeView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDUnitSizeView.h; sourceTree = SOURCE_ROOT; };
+		6D6140751EBB2F8100FD549C /* LEDUnitSizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDUnitSizeView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDUnitSizeView.m; sourceTree = SOURCE_ROOT; };
+		6D6140771EBB36CD00FD549C /* LEDCycleVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDCycleVIew.h; path = LEDCalculator/Classes/Calculator/Controller/LEDCycleVIew.h; sourceTree = SOURCE_ROOT; };
+		6D6140781EBB36CD00FD549C /* LEDCycleVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDCycleVIew.m; path = LEDCalculator/Classes/Calculator/Controller/LEDCycleVIew.m; sourceTree = SOURCE_ROOT; };
+		6DB29B461EBAD52C009A05C7 /* LEDMeasureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDMeasureView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDMeasureView.h; sourceTree = SOURCE_ROOT; };
+		6DB29B471EBAD52C009A05C7 /* LEDMeasureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDMeasureView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDMeasureView.m; sourceTree = SOURCE_ROOT; };
+		6DB29B491EBAD8CE009A05C7 /* LEDInpuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEDInpuView.h; path = LEDCalculator/Classes/Calculator/Controller/LEDInpuView.h; sourceTree = SOURCE_ROOT; };
+		6DB29B4A1EBAD8CE009A05C7 /* LEDInpuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEDInpuView.m; path = LEDCalculator/Classes/Calculator/Controller/LEDInpuView.m; sourceTree = SOURCE_ROOT; };
+		6DB29B4C1EBAD8D8009A05C7 /* LEDInpuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LEDInpuView.xib; path = LEDCalculator/Classes/Calculator/Controller/LEDInpuView.xib; sourceTree = SOURCE_ROOT; };
 		7F7921B1A17DD36BDB160EA6 /* Pods-LEDCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculatorTests/Pods-LEDCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		8DE0BC62A33B4F870177F38A /* Pods-LEDCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculatorUITests/Pods-LEDCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F51BF7A81EBA155C0019ACD8 /* LEDCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +315,23 @@
 		F51BF7F41EBA17E30019ACD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6D61406E1EBB204D00FD549C /* LEDMianView.h */,
+				6D61406F1EBB204D00FD549C /* LEDMianView.m */,
+				6DB29B461EBAD52C009A05C7 /* LEDMeasureView.h */,
+				6DB29B471EBAD52C009A05C7 /* LEDMeasureView.m */,
+				6DB29B491EBAD8CE009A05C7 /* LEDInpuView.h */,
+				6DB29B4A1EBAD8CE009A05C7 /* LEDInpuView.m */,
+				6DB29B4C1EBAD8D8009A05C7 /* LEDInpuView.xib */,
+				6D6140681EBB1C7100FD549C /* LEDModelView.h */,
+				6D6140691EBB1C7100FD549C /* LEDModelView.m */,
+				6D61406B1EBB1E6D00FD549C /* LEDSizeView.h */,
+				6D61406C1EBB1E6D00FD549C /* LEDSizeView.m */,
+				6D6140711EBB2F1400FD549C /* LEDUnitView.h */,
+				6D6140721EBB2F1400FD549C /* LEDUnitView.m */,
+				6D6140741EBB2F8100FD549C /* LEDUnitSizeView.h */,
+				6D6140751EBB2F8100FD549C /* LEDUnitSizeView.m */,
+				6D6140771EBB36CD00FD549C /* LEDCycleVIew.h */,
+				6D6140781EBB36CD00FD549C /* LEDCycleVIew.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,6 +448,7 @@
 		F51BF7A01EBA155B0019ACD8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LED;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = wyman;
 				TargetAttributes = {
@@ -453,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51BF7BB1EBA155C0019ACD8 /* LaunchScreen.storyboard in Resources */,
+				6DB29B4D1EBAD8D8009A05C7 /* LEDInpuView.xib in Resources */,
 				F51BF7B81EBA155C0019ACD8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,23 +661,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6140791EBB36CD00FD549C /* LEDCycleVIew.m in Sources */,
 				F51BF81E1EBA1CAD0019ACD8 /* UIImageView+WY.m in Sources */,
+				6DB29B4B1EBAD8CE009A05C7 /* LEDInpuView.m in Sources */,
 				F51BF81A1EBA1CAD0019ACD8 /* UIBarButtonItem+WY.m in Sources */,
 				F51BF8151EBA1CAD0019ACD8 /* NSArray+WY.m in Sources */,
 				F51BF8191EBA1CAD0019ACD8 /* NSString+WY.m in Sources */,
 				F51BF8231EBA1CD20019ACD8 /* LEDNavController.m in Sources */,
 				F51BF81D1EBA1CAD0019ACD8 /* UIImage+WY.m in Sources */,
 				F51BF7E81EBA16620019ACD8 /* AppDelegate.m in Sources */,
+				6DB29B481EBAD52C009A05C7 /* LEDMeasureView.m in Sources */,
 				F51BF7EC1EBA16A50019ACD8 /* main.m in Sources */,
+				6D6140731EBB2F1400FD549C /* LEDUnitView.m in Sources */,
+				6D61406D1EBB1E6D00FD549C /* LEDSizeView.m in Sources */,
 				F51BF7F11EBA17B80019ACD8 /* LEDBaseViewController.m in Sources */,
 				F51BF8181EBA1CAD0019ACD8 /* NSFileManager+WY.m in Sources */,
 				F51BF81C1EBA1CAD0019ACD8 /* UIColor+WY.m in Sources */,
 				F51BF8201EBA1CAD0019ACD8 /* UIView+WY.m in Sources */,
+				6D6140701EBB204D00FD549C /* LEDMianView.m in Sources */,
 				F51BF8171EBA1CAD0019ACD8 /* NSDictionary+WY.m in Sources */,
 				F51BF81F1EBA1CAD0019ACD8 /* UITabBarItem+WY.m in Sources */,
 				F51BF8161EBA1CAD0019ACD8 /* NSDate+WY.m in Sources */,
 				F51BF81B1EBA1CAD0019ACD8 /* UIButton+WY.m in Sources */,
+				6D61406A1EBB1C7100FD549C /* LEDModelView.m in Sources */,
 				F51BF7F71EBA18040019ACD8 /* LEDMainViewController.m in Sources */,
+				6D6140761EBB2F8100FD549C /* LEDUnitSizeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
