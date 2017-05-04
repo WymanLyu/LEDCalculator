@@ -27,6 +27,8 @@
         make.edges.mas_equalTo(UIEdgeInsetsZero);
     }];
     
+    int a = 0;
+    
     
 
     
