@@ -30,6 +30,8 @@
     int a = 0;
     NSLog(@"%d" , a);
     
+    NSLog(@"我擦嘞");
+    
     
     
 
