@@ -21,9 +21,11 @@
 
 @end
 
-static CGFloat const margin = 5;
-
 @implementation LEDMeasureView
+{
+    CGFloat  margin;
+
+}
 
 //MARK:懒加载
 
@@ -84,6 +86,7 @@ static CGFloat const margin = 5;
    
     if (self = [super initWithFrame:frame]) {
         
+        margin = fit5W(5);
         [self setupUI];
         [self addconstraint];
         
@@ -104,22 +107,6 @@ static CGFloat const margin = 5;
 - (void)addconstraint {
     
     __weak typeof(self) weakSelf = self;
-//    
-//    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(margin);
-//        make.top.mas_equalTo(weakSelf.mas_top).mas_offset(margin);
-//        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(margin);
-//        make.height.mas_equalTo(fitH(40));
-//        
-//    }];
-//    
-//    [self.separLineView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(0);
-//        make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).mas_offset(margin);
-//        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(0);
-//        make.height.mas_equalTo(fitH(1));
-//    }];
-    
     [self.measureLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.mas_left).mas_offset(3 *margin);
         make.top.mas_equalTo(weakSelf.mas_top).mas_offset(2*margin);
@@ -135,15 +122,15 @@ static CGFloat const margin = 5;
     [self.ledinputView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.measureLabel.mas_left).mas_offset(-2*margin);
         make.top.mas_equalTo(weakSelf.detailLabel.mas_bottom).mas_offset(margin);
-        make.width.mas_equalTo(150);
-        make.height.mas_equalTo(45);
+        make.width.mas_equalTo(fit5W(150));
+        make.height.mas_equalTo(fit5H(45));
     }];
     
     [self.ledinputViewH mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.ledinputView.mas_right).mas_offset(3*margin);
         make.top.mas_equalTo(weakSelf.detailLabel.mas_bottom).mas_offset(margin);
-        make.width.mas_equalTo(150);
-        make.height.mas_equalTo(45);
+        make.width.mas_equalTo(fit5W(150));
+        make.height.mas_equalTo(fit5H(45));
     }];
     
     

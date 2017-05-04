@@ -78,22 +78,24 @@ static CGFloat const margin = 5;
    
     __weak typeof(self) weakSelf = self;
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(3 *margin);
-        make.top.mas_equalTo(weakSelf.mas_top).mas_offset(margin);
-        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(-2*margin);
+        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(fit5W(3 *margin));
+        make.top.mas_equalTo(weakSelf.mas_top).mas_offset(fit5H(margin));
+        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(fit5W(-2*margin));
     }];
     
     [self.subtitleLabe mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.titleLabel.mas_left).mas_offset(0);
-        make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).mas_offset(2);
+        make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).mas_offset(fit5H(2));
     }];
+    
+    CGFloat textH = fit5H(margin)+[self.titleLabel.text wy_getHeightInOneLineWithFont:self.titleLabel.font]+fit5H(2)+[self.subtitleLabe.text wy_getHeightInOneLineWithFont:self.subtitleLabe.font];
     
     [self.sizeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(weakSelf.mas_left).mas_offset(margin);
-        make.top.mas_equalTo(weakSelf.subtitleLabe.mas_bottom).mas_offset(margin);
+//        make.top.mas_equalTo(weakSelf.subtitleLabe.mas_bottom).mas_offset(fit5H(margin));
         make.right.mas_equalTo(weakSelf.mas_right).mas_offset(-margin);
-        make.height.mas_equalTo(30);
-        
+        make.height.mas_equalTo(fit5H(30));
+        make.centerY.equalTo(weakSelf.mas_centerY).mas_offset(textH*0.5); // 居中
     }];
     
 }

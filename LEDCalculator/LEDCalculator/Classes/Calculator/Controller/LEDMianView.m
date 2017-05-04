@@ -99,7 +99,7 @@
         make.left.mas_equalTo(weakSelf.mas_left);
         make.top.mas_equalTo(weakSelf.mas_top);
         make.right.mas_equalTo(weakSelf.mas_right);
-        make.height.mas_equalTo(100);
+        make.height.mas_equalTo(fit5H(100));
         
     }];
     
@@ -108,7 +108,7 @@
         make.left.mas_equalTo(weakSelf.mas_left);
         make.right.mas_equalTo(weakSelf.mas_right);
         make.top.mas_equalTo(weakSelf.measuerView.mas_bottom).mas_offset(1);
-        make.height.mas_equalTo(100);
+        make.height.mas_equalTo(fit5H(100));
         
     }];
     
@@ -117,11 +117,11 @@
         make.left.mas_equalTo(weakSelf.mas_left);
         make.right.mas_equalTo(weakSelf.mas_right);
         make.top.mas_equalTo(weakSelf.modelView.mas_bottom).mas_offset(1);
-        make.height.mas_equalTo(140);
+        make.height.mas_equalTo(fit5H(140));
 
     }];
     
-    CGFloat h = kScreenHeight - 340;
+    CGFloat h = kScreenHeight - fit5H(340);
     
     [self.scycleView mas_makeConstraints:^(MASConstraintMaker *make) {
         

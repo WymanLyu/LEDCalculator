@@ -97,16 +97,16 @@ static CGFloat const margin = 5;
     
       __weak typeof(self) weakSelf = self;
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(3 *margin);
+        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(fit5W(3 *margin));
         make.top.mas_equalTo(weakSelf.mas_top).mas_offset(margin);
-        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(-2*margin);
+        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(fit5W(-2*margin));
     }];
     
     [self.unitSizeView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(3*margin);
-        make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).mas_offset(2*margin);
-        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(-3*margin);
-        make.height.mas_equalTo(30);
+        make.left.mas_equalTo(weakSelf.mas_left).mas_offset(fit5W(3*margin));
+        make.top.mas_equalTo(weakSelf.titleLabel.mas_bottom).mas_offset(fit5H(2*margin));
+        make.right.mas_equalTo(weakSelf.mas_right).mas_offset(fit5W(-3*margin));
+        make.height.mas_equalTo(fit5H(30));
         
     }];
     
@@ -120,9 +120,9 @@ static CGFloat const margin = 5;
     [self.calculatorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.mas_equalTo(weakSelf.mas_centerX);
-        make.top.mas_equalTo(weakSelf.separLineView.mas_bottom).mas_offset(2*margin);
-        make.height.mas_equalTo(35);
-        make.width.mas_equalTo(100);
+        make.top.mas_equalTo(weakSelf.separLineView.mas_bottom).mas_offset(fit5H(2*margin));
+        make.height.mas_equalTo(fit5H(35));
+        make.width.mas_equalTo(fit5W(100));
         
     }];
     

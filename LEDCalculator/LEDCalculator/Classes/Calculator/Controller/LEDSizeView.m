@@ -44,15 +44,15 @@ static CGFloat const itemH = 30;
     
     NSInteger count = self.subviews.count;
     
-    CGFloat itemW = (self.frame.size.width - (count - 1) * margin) / count;
-    CGFloat itehH = itemH;
+    CGFloat itemW = (self.frame.size.width - (count - 1) * fit5W(margin)) / count;
+    CGFloat itehH = fit5H(itemH);
     CGFloat itemY = 0;
     
     for (NSInteger i = 0; i < count; i++) {
         
         UIButton *itemBtn = self.subviews[i];
         
-        CGFloat itemX = i * (itemW + margin);
+        CGFloat itemX = i * (itemW + fit5W(margin));
         
         itemBtn.frame = CGRectMake(itemX, itemY, itemW, itehH);
         
