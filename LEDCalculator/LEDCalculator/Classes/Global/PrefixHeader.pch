@@ -25,6 +25,7 @@
 
 #import "LEDBaseViewController.h"
 #import "WYExtension.h"
+#import "NSObject+WYEvent.h"
 #import "LEDNavController.h"
 #import "LEDMainViewController.h"
 #import <Masonry.h>

@@ -8,8 +8,11 @@
 
 #import "LEDMainViewController.h"
 #import "LEDMianView.h"
+#import "LEDResultViewController.h"
+#import "LEDResultModel.h"
 
 @interface LEDMainViewController ()
+
 
 @end
 
@@ -29,11 +32,21 @@
 //    }];
     
     LEDMianView *measuerView = [[LEDMianView alloc] init];
-    measuerView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+//    measuerView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     [self.view addSubview:measuerView];
+    [measuerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsZero);
+    }];
+   
     
-
-    
+    __weak typeof(self)weakSelf = self;
+    [self wy_observeNotificationName:@"calculatorBtnClick" fromSender:nil handle:^(NSNotification *noti) {
+       
+        LEDResultViewController *reVc = [LEDResultViewController new];
+        reVc.reArr = [LEDResultModel resultModelArrayWithResultCountArray:nil];
+        [weakSelf.navigationController pushViewController:reVc animated:YES];
+        
+    }];
     
 
     

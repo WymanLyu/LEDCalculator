@@ -10,4 +10,6 @@
 
 @interface LEDResultViewController : LEDBaseViewController
 
+@property (nonatomic, strong) NSArray *reArr;
+
 @end

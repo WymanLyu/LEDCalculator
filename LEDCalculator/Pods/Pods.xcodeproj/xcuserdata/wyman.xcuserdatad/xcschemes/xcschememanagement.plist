@@ -8,44 +8,41 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-LEDCalculator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods-LEDCalculatorTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>Pods-LEDCalculatorUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>SDCycleScrollView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B550F389C2FB6B86AB04588284CF660</key>
+		<key>220BC64793912858F43BD7193CDFFDB0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -55,27 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5ED33FF5F3727635DB01CAC736731744</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6349034B7C0D17401C8D4398CC5114A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>701CBCFA407FCECD9ABB35A4EC227420</key>
+		<key>7521E1DB1495781645DF9E2A98A2304A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7625E0782AF33E57C6C97C0DC6E57EC1</key>
+		<key>815831D9F373CC16DB971E7A5870C671</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DA26325CF979712A0CABE8A51024D638</key>
 		<dict>
 			<key>primary</key>
 			<true/>
