@@ -121,14 +121,15 @@
 
     }];
     
-    CGFloat h = kScreenHeight - fit5H(340);
+    CGFloat h = kScreenHeight - fit5H(340)-64; // 控制器往下移了64
     
     [self.scycleView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.mas_equalTo(weakSelf.mas_left);
         make.right.mas_equalTo(weakSelf.mas_right);
-        make.top.mas_equalTo(weakSelf.unitView.mas_bottom).mas_offset(1);
+//        make.top.mas_equalTo(weakSelf.unitView.mas_bottom).mas_offset(1);
         make.height.mas_equalTo(h);
+        make.bottom.equalTo(weakSelf.mas_bottom);
         
     }];
     

@@ -74,6 +74,7 @@ static CGFloat const margin = 5;
         UIButton *calculatorBtn = [[UIButton alloc] init];
         [calculatorBtn setTitle:@"计算" forState:UIControlStateNormal];
         [calculatorBtn setBackgroundColor:[UIColor lightGrayColor]];
+        [calculatorBtn addTarget:self action:@selector(calculatorBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:calculatorBtn];
         _calculatorBtn = calculatorBtn;
     }
@@ -81,6 +82,11 @@ static CGFloat const margin = 5;
     
     
 }
+
+- (void)calculatorBtnClick:(UIButton *)btn {
+    [self wy_postNotificationName:@"calculatorBtnClick" userInfo:nil finishHandle:nil];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {

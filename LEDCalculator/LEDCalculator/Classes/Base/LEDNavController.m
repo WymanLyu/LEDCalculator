@@ -17,6 +17,7 @@
 + (void)initialize {
     [[UINavigationBar appearance] setBackgroundImage:[UIImage wy_imageWithUIColor:[UIColor colorWithRed:47.0/255.0 green:49.0/255.0 blue:57.0/255.0 alpha:1] andFrame:CGRectMake(0, 0, kScreenWidth, 44)] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
 }
 

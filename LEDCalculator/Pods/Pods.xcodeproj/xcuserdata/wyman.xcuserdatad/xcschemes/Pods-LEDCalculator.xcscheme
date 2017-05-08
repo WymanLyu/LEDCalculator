@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '701CBCFA407FCECD9ABB35A4EC227420'
+               BlueprintIdentifier = '5ED33FF5F3727635DB01CAC736731744'
                BlueprintName = 'Pods-LEDCalculator'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-LEDCalculator.a'>
