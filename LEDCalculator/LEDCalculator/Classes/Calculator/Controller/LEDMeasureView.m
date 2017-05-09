@@ -36,6 +36,7 @@
         UILabel *measuerLabel = [[UILabel alloc] init];
         measuerLabel.text = @"目标尺寸:";
         measuerLabel.font = [UIFont systemFontOfSize:18];
+        measuerLabel.textColor = [UIColor whiteColor];
         [self addSubview:measuerLabel];
         _measureLabel = measuerLabel;
     }
@@ -49,6 +50,7 @@
         UILabel *detailLabel = [[UILabel alloc] init];
         detailLabel.text = @"(请在下面空格处手动输入目标LED屏的尺寸)";
         detailLabel.font = [UIFont systemFontOfSize:14];
+        detailLabel.textColor = [UIColor whiteColor];
         [self addSubview:detailLabel];
         _detailLabel = detailLabel;
     }
@@ -99,7 +101,7 @@
 - (void)setupUI {
     
 //    [self addSubview:self.titleLabel];
-    self.backgroundColor = [UIColor whiteColor];
+//    self.backgroundColor = [UIColor whiteColor];
 
 }
 

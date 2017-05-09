@@ -39,6 +39,10 @@
 
 - (void)setReArr:(NSArray *)reArr {
     _reArr = reArr;
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

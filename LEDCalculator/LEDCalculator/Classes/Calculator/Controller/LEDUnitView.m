@@ -9,13 +9,13 @@
 #import "LEDUnitView.h"
 #import "LEDUnitSizeView.h"
 
-@interface LEDUnitView ()
+@interface LEDUnitView ()<UIPickerViewDataSource, UIPickerViewDelegate>
 
 /** 标题 */
 @property(nonatomic , weak) UILabel  *titleLabel;
 
 /** 按钮 */
-@property(nonatomic , weak) LEDUnitSizeView  *unitSizeView;
+@property(nonatomic , weak) UITextField  *unitSizeView;
 
 /** 分割线 */
 @property(nonatomic , weak) UIView  *separLineView;
@@ -35,20 +35,32 @@ static CGFloat const margin = 5;
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.text = @"单元板型号:";
         titleLabel.font = [UIFont systemFontOfSize:20];
+        titleLabel.textColor = [UIColor whiteColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
     return _titleLabel;
 }
 
-- (LEDUnitSizeView *)unitSizeView {
+- (UITextView *)unitSizeView {
   
     if (!_unitSizeView) {
-        LEDUnitSizeView *sizeView = [[LEDUnitSizeView alloc] init];
-        NSArray *items =  @[@"单双色",@"室内全彩", @"户外全彩"];
-        sizeView.items = items;
+//        LEDUnitSizeView *sizeView = [[LEDUnitSizeView alloc] init];
+//        NSArray *items =  @[@"单双色",@"室内全彩", @"户外全彩"];
+//        sizeView.items = items;
+//        [self addSubview:sizeView];
+        
+        UITextField *sizeView = [UITextField new];
+        sizeView.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:sizeView];
         _unitSizeView = sizeView;
+        
+        UIPickerView *pickView = [UIPickerView new];
+        pickView.dataSource = self;
+        pickView.delegate = self;
+        _unitSizeView.inputView = pickView;
+        
+        
     }
     return _unitSizeView;
 
@@ -60,7 +72,7 @@ static CGFloat const margin = 5;
    
     if (!_separLineView) {
         UIView *separLineView = [[UIView alloc] init];
-        separLineView.backgroundColor = [UIColor colorWithRed:234/255.0f green:234/255.0f blue:234/255.0f alpha:1];
+//        separLineView.backgroundColor = [UIColor colorWithRed:234/255.0f green:234/255.0f blue:234/255.0f alpha:1];
         [self addSubview:separLineView];
         _separLineView = separLineView;
     }
@@ -76,6 +88,8 @@ static CGFloat const margin = 5;
         [calculatorBtn setBackgroundColor:[UIColor lightGrayColor]];
         [calculatorBtn addTarget:self action:@selector(calculatorBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:calculatorBtn];
+        calculatorBtn.layer.cornerRadius = 3;
+        calculatorBtn.clipsToBounds = YES;
         _calculatorBtn = calculatorBtn;
     }
     return _calculatorBtn;
@@ -91,7 +105,7 @@ static CGFloat const margin = 5;
     
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = [UIColor whiteColor];
+//        self.backgroundColor = [UIColor whiteColor];
         
         [self addConstranint];
     }
@@ -134,6 +148,28 @@ static CGFloat const margin = 5;
     
 
 }
+
+
+#pragma mark - delegate
+
+// returns the number of 'columns' to display.
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 2;
+}
+
+// returns the # of rows in each component..
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 5;
+}
+
+- (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [NSString stringWithFormat:@"%zd-%zd" ,component,row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
+}
+
 
 
 @end

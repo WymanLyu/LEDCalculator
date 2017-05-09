@@ -31,6 +31,7 @@ static CGFloat const margin = 5;
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.text = @"外框型号:";
         titleLabel.font = [UIFont systemFontOfSize:20];
+        titleLabel.textColor = [UIColor whiteColor];
         [self addSubview:titleLabel];
         _titleLabel = titleLabel;
     }
@@ -43,6 +44,7 @@ static CGFloat const margin = 5;
         UILabel *subtileLabel = [[UILabel alloc] init];
         subtileLabel.text = @"(所标尺寸为单边的长度，请点选)";
         subtileLabel.font = [UIFont systemFontOfSize:14];
+        subtileLabel.textColor = [UIColor whiteColor];
         [self addSubview:subtileLabel];
         _subtitleLabe = subtileLabel;
     }
@@ -66,7 +68,7 @@ static CGFloat const margin = 5;
   
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = [UIColor whiteColor];
+//        self.backgroundColor = [UIColor whiteColor];
 
         [self addConstranint];
     }

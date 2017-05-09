@@ -72,7 +72,7 @@
     
     if (self = [super initWithFrame:frame]) {
         
-        self.backgroundColor = [UIColor colorWithRed:234/255.0f green:234/255.0f blue:234/255.0f alpha:1];
+//        self.backgroundColor = [UIColor colorWithRed:234/255.0f green:234/255.0f blue:234/255.0f alpha:1];
         [self setupUI];
         [self addContrasint];
     }
