@@ -11,6 +11,9 @@
 static CGFloat const margin =  5;
 static CGFloat const itemH = 30;
 @implementation LEDSizeView
+{
+    __weak UIButton *_selectedBtn;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
@@ -30,12 +33,21 @@ static CGFloat const itemH = 30;
     for (NSInteger i = 0; i < items.count; i ++) {
         
         UIButton *itemBtn = [[UIButton alloc] init];
+        itemBtn.tag = i;
+        [itemBtn addTarget:self action:@selector(itemBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         itemBtn.backgroundColor = [UIColor lightGrayColor];
+        [itemBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [itemBtn setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
         [itemBtn setTitle:items[i] forState:UIControlStateNormal];
         itemBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        itemBtn.layer.cornerRadius = 3;
+        itemBtn.clipsToBounds = YES;
         [self addSubview:itemBtn];
     }
-
+    if (self.subviews.count > 0) {
+        UIButton *firstBtn = [self.subviews firstObject];
+        [self itemBtnClick:firstBtn];
+    }
 }
 
 - (void)layoutSubviews {
@@ -58,6 +70,15 @@ static CGFloat const itemH = 30;
         
     }
   
+}
+
+- (void)itemBtnClick:(UIButton *)btn {
+    
+    _selectedBtn.selected = NO;
+    btn.selected = YES;
+    _selectedBtn = btn;
+    
+    
 }
 
 @end
