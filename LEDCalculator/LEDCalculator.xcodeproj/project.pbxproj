@@ -54,6 +54,9 @@
 		F553341C1EBF83B8001696C6 /* WYNotificationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F553340C1EBF83B8001696C6 /* WYNotificationEvent.m */; };
 		F553341D1EBF83B8001696C6 /* NSObject+WYEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = F553340E1EBF83B8001696C6 /* NSObject+WYEvent.m */; };
 		F553341E1EBF83B8001696C6 /* WYWeakObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F55334111EBF83B8001696C6 /* WYWeakObject.m */; };
+		F5C029301EC2B37200786996 /* led.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C0292F1EC2B37200786996 /* led.plist */; };
+		F5C029331EC2B39400786996 /* LEDUnitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C029321EC2B39400786996 /* LEDUnitModel.m */; };
+		F5C029351EC2C23C00786996 /* result.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C029341EC2C23C00786996 /* result.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +177,10 @@
 		F55334101EBF83B8001696C6 /* WYWeakObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWeakObject.h; sourceTree = "<group>"; };
 		F55334111EBF83B8001696C6 /* WYWeakObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWeakObject.m; sourceTree = "<group>"; };
 		F55334121EBF83B8001696C6 /* WYEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYEvent.h; sourceTree = "<group>"; };
+		F5C0292F1EC2B37200786996 /* led.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = led.plist; sourceTree = "<group>"; };
+		F5C029311EC2B39400786996 /* LEDUnitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDUnitModel.h; sourceTree = "<group>"; };
+		F5C029321EC2B39400786996 /* LEDUnitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDUnitModel.m; sourceTree = "<group>"; };
+		F5C029341EC2C23C00786996 /* result.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = result.plist; sourceTree = "<group>"; };
 		FA7D1CBB9FED26B32A87B688 /* Pods-LEDCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculator/Pods-LEDCalculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +273,8 @@
 		F51BF7AB1EBA155C0019ACD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F5C0292F1EC2B37200786996 /* led.plist */,
+				F5C029341EC2C23C00786996 /* result.plist */,
 				F51BF7B71EBA155C0019ACD8 /* Assets.xcassets */,
 				F51BF7B91EBA155C0019ACD8 /* LaunchScreen.storyboard */,
 			);
@@ -356,6 +365,8 @@
 			children = (
 				F55333F11EBF7C74001696C6 /* LEDResultModel.h */,
 				F55333F21EBF7C74001696C6 /* LEDResultModel.m */,
+				F5C029311EC2B39400786996 /* LEDUnitModel.h */,
+				F5C029321EC2B39400786996 /* LEDUnitModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -616,8 +627,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C029301EC2B37200786996 /* led.plist in Resources */,
 				F51BF7BB1EBA155C0019ACD8 /* LaunchScreen.storyboard in Resources */,
 				6DB29B4D1EBAD8D8009A05C7 /* LEDInpuView.xib in Resources */,
+				F5C029351EC2C23C00786996 /* result.plist in Resources */,
 				F51BF7B81EBA155C0019ACD8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -804,6 +817,7 @@
 				F51BF7F11EBA17B80019ACD8 /* LEDBaseViewController.m in Sources */,
 				F51BF8181EBA1CAD0019ACD8 /* NSFileManager+WY.m in Sources */,
 				F55334191EBF83B8001696C6 /* WYKVOObserver.m in Sources */,
+				F5C029331EC2B39400786996 /* LEDUnitModel.m in Sources */,
 				F51BF81C1EBA1CAD0019ACD8 /* UIColor+WY.m in Sources */,
 				F51BF8201EBA1CAD0019ACD8 /* UIView+WY.m in Sources */,
 				6D6140701EBB204D00FD549C /* LEDMianView.m in Sources */,

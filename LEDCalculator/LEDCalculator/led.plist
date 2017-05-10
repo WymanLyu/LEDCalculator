@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>subDataArr</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>室内P2.5</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>室内P3</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>室内P4(16扫)</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>室内P4(32扫)</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>室内P4(20扫)</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>室内P5</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>室内P6</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>室内表贴全彩</string>
+	</dict>
+	<dict>
+		<key>subDataArr</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>户外P4 表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外P5 表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外P6 表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外P8全彩（5扫）</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外P8全彩（4扫）</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外P10全彩 4s</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外P10全彩 2s</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>户外表贴全彩</string>
+	</dict>
+	<dict>
+		<key>subDataArr</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>户外P10双色表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>户外/半户外P10单色</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>户外单双色</string>
+	</dict>
+	<dict>
+		<key>subDataArr</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>5.0单色表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>5.0双色表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>3.75单色表贴</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>3.75双色表贴</string>
+			</dict>
+		</array>
+		<key>title</key>
+		<string>规格-室内单双色</string>
+	</dict>
+</array>
+</plist>

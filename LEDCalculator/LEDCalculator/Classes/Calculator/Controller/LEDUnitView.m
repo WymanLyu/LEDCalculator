@@ -8,14 +8,16 @@
 
 #import "LEDUnitView.h"
 #import "LEDUnitSizeView.h"
+#import "LEDUnitModel.h"
 
-@interface LEDUnitView ()<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface LEDUnitView ()<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
 /** 标题 */
 @property(nonatomic , weak) UILabel  *titleLabel;
 
 /** 按钮 */
 @property(nonatomic , weak) UITextField  *unitSizeView;
+@property (nonatomic, weak) UIPickerView *pickView;
 
 /** 分割线 */
 @property(nonatomic , weak) UIView  *separLineView;
@@ -23,11 +25,24 @@
 /** 计算按钮 */
 @property(nonatomic , weak) UIButton  *calculatorBtn;
 
+/** dataSource */
+@property (nonatomic, weak) NSArray *dataArr;
+
 @end
 
 static CGFloat const margin = 5;
 
 @implementation LEDUnitView
+
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    LEDUnitModel *unit = [self.dataArr firstObject];
+    LEDUnitModel *subUnit = [unit.subDataArr firstObject];
+    self.unitSizeView.text = subUnit.title;
+}
+
+
+
 //MARK:懒加载
 - (UILabel *)titleLabel {
     
@@ -42,25 +57,23 @@ static CGFloat const margin = 5;
     return _titleLabel;
 }
 
-- (UITextView *)unitSizeView {
+- (UITextField *)unitSizeView {
   
     if (!_unitSizeView) {
-//        LEDUnitSizeView *sizeView = [[LEDUnitSizeView alloc] init];
-//        NSArray *items =  @[@"单双色",@"室内全彩", @"户外全彩"];
-//        sizeView.items = items;
-//        [self addSubview:sizeView];
-        
+
         UITextField *sizeView = [UITextField new];
         sizeView.backgroundColor = [UIColor lightGrayColor];
+        sizeView.delegate = self;
         [self addSubview:sizeView];
         _unitSizeView = sizeView;
         
         UIPickerView *pickView = [UIPickerView new];
         pickView.dataSource = self;
         pickView.delegate = self;
+        pickView.backgroundColor = [UIColor whiteColor];
+        _pickView = pickView;
         _unitSizeView.inputView = pickView;
-        
-        
+    
     }
     return _unitSizeView;
 
@@ -105,8 +118,6 @@ static CGFloat const margin = 5;
     
     if (self = [super initWithFrame:frame]) {
         
-//        self.backgroundColor = [UIColor whiteColor];
-        
         [self addConstranint];
     }
     
@@ -149,6 +160,16 @@ static CGFloat const margin = 5;
 
 }
 
+- (NSArray *)dataArr {
+    if (!_dataArr) {
+        
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"led" withExtension:@"plist"];
+        NSArray *arr = [NSArray arrayWithContentsOfURL:url];
+        _dataArr = [NSArray yy_modelArrayWithClass:[LEDUnitModel class] json:arr];
+    }
+    return _dataArr;
+}
+
 
 #pragma mark - delegate
 
@@ -159,15 +180,47 @@ static CGFloat const margin = 5;
 
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 5;
+    if (component == 0) { // 第一排
+        return self.dataArr.count;
+    } else {
+        NSInteger index = [pickerView selectedRowInComponent:0];
+        if (index == -1) {
+            return 0;
+        }
+        LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
+        return unit.subDataArr.count;
+    }
 }
 
 - (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    return [NSString stringWithFormat:@"%zd-%zd" ,component,row];
+    
+    if (component == 0) { // 第一排
+        LEDUnitModel *unit = [self.dataArr objectAtIndex:row];
+        return unit.title;
+    } else {
+        NSInteger index = [pickerView selectedRowInComponent:0];
+        if (index == -1) {
+            return 0;
+        }
+        LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
+        LEDUnitModel *subUnit = [unit.subDataArr objectAtIndex:row];
+        return subUnit.title;
+    }
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
+    if (component == 0) {
+        [pickerView selectRow:0 inComponent:1 animated:NO];
+        [pickerView reloadComponent:1];
+    }
+    
+    // 设置选中
+    NSInteger index = [pickerView selectedRowInComponent:0];
+    NSInteger row2 = [pickerView selectedRowInComponent:1];
+    LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
+    LEDUnitModel *subUnit = [unit.subDataArr objectAtIndex:row2];
+    self.unitSizeView.text = subUnit.title;
 }
 
 
