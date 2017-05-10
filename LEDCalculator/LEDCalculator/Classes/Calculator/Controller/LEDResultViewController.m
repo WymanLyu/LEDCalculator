@@ -135,8 +135,8 @@
 
 - (SDCycleScrollView *)scycleView {
     if (!_scycleView) {
-        _scycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:nil];
-        _scycleView.backgroundColor = [UIColor wy_randomColor];
+        _scycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"banner"]];
+//        _scycleView.backgroundColor = [UIColor wy_randomColor];
         [self.view addSubview:self.scycleView];
     }
     return _scycleView;

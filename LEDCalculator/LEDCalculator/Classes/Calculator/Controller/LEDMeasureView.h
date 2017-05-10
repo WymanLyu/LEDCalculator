@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LEDInpuView.h"
 
 @interface LEDMeasureView : UIView
 
+/** inputView */
+@property(nonatomic , weak) LEDInpuView  *ledinputView;
+
+/** inputView */
+@property(nonatomic , weak) LEDInpuView  *ledinputViewH;
 
 @end

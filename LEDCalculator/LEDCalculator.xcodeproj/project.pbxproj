@@ -57,6 +57,9 @@
 		F5C029301EC2B37200786996 /* led.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C0292F1EC2B37200786996 /* led.plist */; };
 		F5C029331EC2B39400786996 /* LEDUnitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C029321EC2B39400786996 /* LEDUnitModel.m */; };
 		F5C029351EC2C23C00786996 /* result.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5C029341EC2C23C00786996 /* result.plist */; };
+		F5C0293D1EC2DE1A00786996 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C029381EC2DE1A00786996 /* LoadingView.m */; };
+		F5C0293E1EC2DE1A00786996 /* NullView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C0293A1EC2DE1A00786996 /* NullView.m */; };
+		F5C0293F1EC2DE1A00786996 /* UIView+YS.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C0293C1EC2DE1A00786996 /* UIView+YS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +184,12 @@
 		F5C029311EC2B39400786996 /* LEDUnitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDUnitModel.h; sourceTree = "<group>"; };
 		F5C029321EC2B39400786996 /* LEDUnitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDUnitModel.m; sourceTree = "<group>"; };
 		F5C029341EC2C23C00786996 /* result.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = result.plist; sourceTree = "<group>"; };
+		F5C029371EC2DE1A00786996 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		F5C029381EC2DE1A00786996 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		F5C029391EC2DE1A00786996 /* NullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullView.h; sourceTree = "<group>"; };
+		F5C0293A1EC2DE1A00786996 /* NullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullView.m; sourceTree = "<group>"; };
+		F5C0293B1EC2DE1A00786996 /* UIView+YS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YS.h"; sourceTree = "<group>"; };
+		F5C0293C1EC2DE1A00786996 /* UIView+YS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YS.m"; sourceTree = "<group>"; };
 		FA7D1CBB9FED26B32A87B688 /* Pods-LEDCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculator/Pods-LEDCalculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +343,7 @@
 		F51BF7E11EBA16620019ACD8 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				F5C029361EC2DE1A00786996 /* WYViewExt */,
 				F55333F41EBF83B8001696C6 /* WYEvent */,
 				F51BF7FA1EBA1CAD0019ACD8 /* WYExtension */,
 			);
@@ -506,6 +516,19 @@
 				F55334111EBF83B8001696C6 /* WYWeakObject.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		F5C029361EC2DE1A00786996 /* WYViewExt */ = {
+			isa = PBXGroup;
+			children = (
+				F5C029371EC2DE1A00786996 /* LoadingView.h */,
+				F5C029381EC2DE1A00786996 /* LoadingView.m */,
+				F5C029391EC2DE1A00786996 /* NullView.h */,
+				F5C0293A1EC2DE1A00786996 /* NullView.m */,
+				F5C0293B1EC2DE1A00786996 /* UIView+YS.h */,
+				F5C0293C1EC2DE1A00786996 /* UIView+YS.m */,
+			);
+			path = WYViewExt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -799,6 +822,7 @@
 				F55334171EBF83B8001696C6 /* WYKVOCourier.m in Sources */,
 				F51BF81E1EBA1CAD0019ACD8 /* UIImageView+WY.m in Sources */,
 				6DB29B4B1EBAD8CE009A05C7 /* LEDInpuView.m in Sources */,
+				F5C0293E1EC2DE1A00786996 /* NullView.m in Sources */,
 				F51BF81A1EBA1CAD0019ACD8 /* UIBarButtonItem+WY.m in Sources */,
 				F51BF8151EBA1CAD0019ACD8 /* NSArray+WY.m in Sources */,
 				F55334161EBF83B8001696C6 /* NSObject+WYKVO.m in Sources */,
@@ -816,12 +840,14 @@
 				F553341B1EBF83B8001696C6 /* WYNotificationCourier.m in Sources */,
 				F51BF7F11EBA17B80019ACD8 /* LEDBaseViewController.m in Sources */,
 				F51BF8181EBA1CAD0019ACD8 /* NSFileManager+WY.m in Sources */,
+				F5C0293D1EC2DE1A00786996 /* LoadingView.m in Sources */,
 				F55334191EBF83B8001696C6 /* WYKVOObserver.m in Sources */,
 				F5C029331EC2B39400786996 /* LEDUnitModel.m in Sources */,
 				F51BF81C1EBA1CAD0019ACD8 /* UIColor+WY.m in Sources */,
 				F51BF8201EBA1CAD0019ACD8 /* UIView+WY.m in Sources */,
 				6D6140701EBB204D00FD549C /* LEDMianView.m in Sources */,
 				F55333F31EBF7C74001696C6 /* LEDResultModel.m in Sources */,
+				F5C0293F1EC2DE1A00786996 /* UIView+YS.m in Sources */,
 				F553341D1EBF83B8001696C6 /* NSObject+WYEvent.m in Sources */,
 				F553341A1EBF83B8001696C6 /* WYKVOTarget.m in Sources */,
 				F51BF8171EBA1CAD0019ACD8 /* NSDictionary+WY.m in Sources */,

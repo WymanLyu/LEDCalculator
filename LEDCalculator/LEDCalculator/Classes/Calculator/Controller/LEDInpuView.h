@@ -13,5 +13,5 @@
 + (instancetype)inptuView;
 /**<#注释#>*/
 @property(nonatomic , copy) NSString * title;
-
+@property (weak, nonatomic) IBOutlet UITextField *textFiled;
 @end

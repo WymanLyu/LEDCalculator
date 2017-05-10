@@ -21,6 +21,14 @@
 				<key>unit</key>
 				<string>MM</string>
 			</dict>
+			<dict>
+				<key>count</key>
+				<string>1000</string>
+				<key>des</key>
+				<string></string>
+				<key>unit</key>
+				<string>MM^2</string>
+			</dict>
 		</array>
 		<key>title</key>
 		<string>实际尺寸</string>
@@ -41,6 +49,14 @@
 				<string>1000</string>
 				<key>des</key>
 				<string>高</string>
+				<key>unit</key>
+				<string>张</string>
+			</dict>
+			<dict>
+				<key>count</key>
+				<string>1000</string>
+				<key>des</key>
+				<string></string>
 				<key>unit</key>
 				<string>张</string>
 			</dict>
@@ -82,6 +98,14 @@
 				<key>unit</key>
 				<string>MM</string>
 			</dict>
+			<dict>
+				<key>count</key>
+				<string>1000</string>
+				<key>des</key>
+				<string></string>
+				<key>unit</key>
+				<string>MM^2</string>
+			</dict>
 		</array>
 		<key>title</key>
 		<string>含边框尺寸</string>
@@ -118,7 +142,16 @@
 	</dict>
 	<dict>
 		<key>resultFieldArr</key>
-		<array/>
+		<array>
+			<dict>
+				<key>count</key>
+				<string>1000</string>
+				<key>des</key>
+				<string></string>
+				<key>unit</key>
+				<string>mm</string>
+			</dict>
+		</array>
 		<key>title</key>
 		<string>推荐用卡</string>
 	</dict>

@@ -7,16 +7,12 @@
 //
 
 #import "LEDModelView.h"
-#import "LEDSizeView.h"
 @interface LEDModelView ()
 
 /** 标题 */
 @property(nonatomic , weak) UILabel  *titleLabel;
 /** 子标题 */
 @property(nonatomic , weak) UILabel  *subtitleLabe;
-
-/** 按钮 */
-@property(nonatomic , weak) LEDSizeView  *sizeView;
 
 
 @end

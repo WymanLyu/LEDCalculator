@@ -15,5 +15,14 @@
 
 @property (nonatomic, strong) NSArray *subDataArr;
 
+// 子单元板属性
+@property (nonatomic, assign) int A; // 宽
+@property (nonatomic, assign) int B; // 高
+@property (nonatomic, assign) int width; // 像素宽
+@property (nonatomic, assign) int height;// 像素高
+@property (nonatomic, assign) int power_dissipation; // 工耗
+@property (nonatomic, assign) int voltage; // 电源带载
+
+
 
 @end

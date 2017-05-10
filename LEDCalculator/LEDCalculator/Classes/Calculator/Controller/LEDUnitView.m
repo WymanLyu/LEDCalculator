@@ -16,7 +16,6 @@
 @property(nonatomic , weak) UILabel  *titleLabel;
 
 /** 按钮 */
-@property(nonatomic , weak) UITextField  *unitSizeView;
 @property (nonatomic, weak) UIPickerView *pickView;
 
 /** 分割线 */
@@ -39,6 +38,7 @@ static CGFloat const margin = 5;
     LEDUnitModel *unit = [self.dataArr firstObject];
     LEDUnitModel *subUnit = [unit.subDataArr firstObject];
     self.unitSizeView.text = subUnit.title;
+    self.selectedSubUnit = subUnit;
 }
 
 
@@ -221,6 +221,7 @@ static CGFloat const margin = 5;
     LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
     LEDUnitModel *subUnit = [unit.subDataArr objectAtIndex:row2];
     self.unitSizeView.text = subUnit.title;
+    self.selectedSubUnit = subUnit;
 }
 
 

@@ -13,4 +13,6 @@
 /** <#注释#>  */
 @property(nonatomic , strong) NSArray * items;
 
+@property (nonatomic, weak) UIButton *selectedBtn;
+
 @end

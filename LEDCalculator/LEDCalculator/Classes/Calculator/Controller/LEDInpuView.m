@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *mmLabel;
-@property (weak, nonatomic) IBOutlet UITextField *textFiled;
+
 
 @end
 
@@ -24,6 +24,8 @@
   
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
+    self.textFiled.layer.cornerRadius = 4;
+    self.textFiled.clipsToBounds = YES;
 }
 
 + (instancetype)inptuView {

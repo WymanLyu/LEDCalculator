@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LEDUnitModel.h"
 
 @interface LEDUnitView : UIView
+
+@property(nonatomic , weak) UITextField  *unitSizeView;
+
+@property (nonatomic, strong) LEDUnitModel *selectedSubUnit;
 
 @end

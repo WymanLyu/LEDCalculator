@@ -23,8 +23,9 @@
   
     if (self = [super initWithFrame:frame]) {
        
-        _scycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:nil];
-        _scycleView.backgroundColor = [UIColor wy_randomColor];
+        _scycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"banner"]];
+        _scycleView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+//        _scycleView.backgroundColor = [UIColor wy_randomColor];
         [self addSubview:self.scycleView];
         
     }

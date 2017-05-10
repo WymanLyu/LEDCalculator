@@ -11,9 +11,6 @@
 static CGFloat const margin =  5;
 static CGFloat const itemH = 30;
 @implementation LEDSizeView
-{
-    __weak UIButton *_selectedBtn;
-}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     

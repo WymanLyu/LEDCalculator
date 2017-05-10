@@ -7,17 +7,13 @@
 //
 
 #import "LEDMeasureView.h"
-#import "LEDInpuView.h"
+
 @interface LEDMeasureView ()
 /** 目标  */
 @property(nonatomic , weak) UILabel * measureLabel;
 /** detail */
 @property(nonatomic , weak) UILabel  *detailLabel;
-/** inputView */
-@property(nonatomic , weak) LEDInpuView  *ledinputView;
 
-/** inputView */
-@property(nonatomic , weak) LEDInpuView  *ledinputViewH;
 
 @end
 

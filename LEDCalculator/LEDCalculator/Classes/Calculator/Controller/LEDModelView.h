@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LEDSizeView.h"
 
 @interface LEDModelView : UIView
+
+/** 按钮 */
+@property(nonatomic , weak) LEDSizeView  *sizeView;
 
 @end
