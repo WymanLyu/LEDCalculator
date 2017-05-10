@@ -66,7 +66,7 @@
         [self.view addSubview:cell];
         // title
         UILabel *titleLbl = [UILabel new];
-        titleLbl.font = [UIFont systemFontOfSize:18.f];
+        titleLbl.font = [UIFont systemFontOfSize:fit5H(14)];
         titleLbl.textColor = [UIColor whiteColor];
         [cell addSubview:titleLbl];
         titleLbl.text = [NSString stringWithFormat:@"%@:", resultCellModel.title];
@@ -80,7 +80,7 @@
             // 描述
             if (fieldModel.des.length) {
                 UILabel *desLbl = [UILabel new];
-                desLbl.font = [UIFont systemFontOfSize:16.0f];
+                desLbl.font = [UIFont systemFontOfSize:fit5H(13)];
                 desLbl.textColor = [UIColor whiteColor];
                 desLbl.text = fieldModel.des;
                 CGFloat desW = [desLbl.text wy_getWidthInOneLineWithFont:desLbl.font];
@@ -94,17 +94,17 @@
             reCountLbl.layer.cornerRadius = 3;
             reCountLbl.layer.masksToBounds = YES;
             reCountLbl.textColor = [UIColor blackColor];
-            reCountLbl.font = [UIFont systemFontOfSize:16.0f];
+            reCountLbl.font = [UIFont systemFontOfSize:fit5H(13)];
             reCountLbl.text = fieldModel.count;
             reCountLbl.textAlignment = NSTextAlignmentCenter;
-            CGFloat reCountW = [reCountLbl.text wy_getWidthInOneLineWithFont:reCountLbl.font]+20;
-            reCountLbl.frame = CGRectMake(reX, 20, reCountW, cellH - 40);
+            CGFloat reCountW = [reCountLbl.text wy_getWidthInOneLineWithFont:reCountLbl.font]+fit5W(10);
+            reCountLbl.frame = CGRectMake(reX, fit5H(20)*0.5, reCountW, cellH - fit5H(20));
             reX += reCountW+margin;
             [cell addSubview:reCountLbl];
             // 单位
             if (fieldModel.unit.length) {
                 UILabel *unitLbl = [UILabel new];
-                unitLbl.font = [UIFont systemFontOfSize:16.0f];
+                unitLbl.font = [UIFont systemFontOfSize:fit5H(13)];
                 unitLbl.textColor = [UIColor whiteColor];
                 NSString *fuhao = @"";
                 if (index == 0 && resultCellModel.resultFieldArr.count > 1) {

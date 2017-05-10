@@ -226,9 +226,17 @@ static CGFloat const margin = 5;
     NSInteger index = [pickerView selectedRowInComponent:0];
     NSInteger row2 = [pickerView selectedRowInComponent:1];
     LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
+    if (row >= unit.subDataArr.count) {
+        return;
+    }
     LEDUnitModel *subUnit = [unit.subDataArr objectAtIndex:row2];
     self.unitSizeView.text = [NSString stringWithFormat:@"  %@",subUnit.title];
     self.selectedSubUnit = subUnit;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    [self.pickView reloadAllComponents];
+    return YES;
 }
 
 
