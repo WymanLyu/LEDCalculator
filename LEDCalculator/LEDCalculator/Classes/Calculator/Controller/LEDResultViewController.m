@@ -47,6 +47,10 @@
         make.height.mas_equalTo(h);
         
     }];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:nil];
 }
 
 - (void)setReArr:(NSArray *)reArr {

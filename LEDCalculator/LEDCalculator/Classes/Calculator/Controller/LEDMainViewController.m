@@ -23,6 +23,10 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:nil];
     
     UIImageView *imgView = [[UIImageView alloc] init];
     imgView.image = [UIImage imageNamed:@"bg"];

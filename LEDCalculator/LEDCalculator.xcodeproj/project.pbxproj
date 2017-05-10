@@ -60,6 +60,7 @@
 		F5C0293D1EC2DE1A00786996 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C029381EC2DE1A00786996 /* LoadingView.m */; };
 		F5C0293E1EC2DE1A00786996 /* NullView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C0293A1EC2DE1A00786996 /* NullView.m */; };
 		F5C0293F1EC2DE1A00786996 /* UIView+YS.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C0293C1EC2DE1A00786996 /* UIView+YS.m */; };
+		F5C029421EC30DA400786996 /* LEDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C029411EC30DA300786996 /* LEDTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,8 @@
 		F5C0293A1EC2DE1A00786996 /* NullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullView.m; sourceTree = "<group>"; };
 		F5C0293B1EC2DE1A00786996 /* UIView+YS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YS.h"; sourceTree = "<group>"; };
 		F5C0293C1EC2DE1A00786996 /* UIView+YS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YS.m"; sourceTree = "<group>"; };
+		F5C029401EC30DA300786996 /* LEDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDTextField.h; sourceTree = "<group>"; };
+		F5C029411EC30DA300786996 /* LEDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEDTextField.m; sourceTree = "<group>"; };
 		FA7D1CBB9FED26B32A87B688 /* Pods-LEDCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LEDCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-LEDCalculator/Pods-LEDCalculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -401,6 +404,8 @@
 				6D6140751EBB2F8100FD549C /* LEDUnitSizeView.m */,
 				6D6140771EBB36CD00FD549C /* LEDCycleVIew.h */,
 				6D6140781EBB36CD00FD549C /* LEDCycleVIew.m */,
+				F5C029401EC30DA300786996 /* LEDTextField.h */,
+				F5C029411EC30DA300786996 /* LEDTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -852,6 +857,7 @@
 				F553341A1EBF83B8001696C6 /* WYKVOTarget.m in Sources */,
 				F51BF8171EBA1CAD0019ACD8 /* NSDictionary+WY.m in Sources */,
 				F51BF81F1EBA1CAD0019ACD8 /* UITabBarItem+WY.m in Sources */,
+				F5C029421EC30DA400786996 /* LEDTextField.m in Sources */,
 				F51BF8161EBA1CAD0019ACD8 /* NSDate+WY.m in Sources */,
 				F553341C1EBF83B8001696C6 /* WYNotificationEvent.m in Sources */,
 				F51BF81B1EBA1CAD0019ACD8 /* UIButton+WY.m in Sources */,

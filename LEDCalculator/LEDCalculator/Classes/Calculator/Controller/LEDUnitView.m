@@ -9,6 +9,7 @@
 #import "LEDUnitView.h"
 #import "LEDUnitSizeView.h"
 #import "LEDUnitModel.h"
+#import "LEDTextField.h"
 
 @interface LEDUnitView ()<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 
@@ -37,7 +38,7 @@ static CGFloat const margin = 5;
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     LEDUnitModel *unit = [self.dataArr firstObject];
     LEDUnitModel *subUnit = [unit.subDataArr firstObject];
-    self.unitSizeView.text = subUnit.title;
+    self.unitSizeView.text = [NSString stringWithFormat:@"  %@",subUnit.title];
     self.selectedSubUnit = subUnit;
 }
 
@@ -61,11 +62,14 @@ static CGFloat const margin = 5;
   
     if (!_unitSizeView) {
 
-        UITextField *sizeView = [UITextField new];
-        sizeView.backgroundColor = [UIColor lightGrayColor];
+        LEDTextField *sizeView = [LEDTextField new];
+        sizeView.backgroundColor = [UIColor whiteColor];
+        sizeView.layer.cornerRadius = 3.0;
+        sizeView.clipsToBounds = YES;
         sizeView.delegate = self;
         [self addSubview:sizeView];
         _unitSizeView = sizeView;
+        _unitSizeView.borderStyle =UITextBorderStyleNone;
         
         UIPickerView *pickView = [UIPickerView new];
         pickView.dataSource = self;
@@ -203,6 +207,9 @@ static CGFloat const margin = 5;
             return 0;
         }
         LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
+        if (row >= unit.subDataArr.count) {
+            return 0;
+        }
         LEDUnitModel *subUnit = [unit.subDataArr objectAtIndex:row];
         return subUnit.title;
     }
@@ -220,7 +227,7 @@ static CGFloat const margin = 5;
     NSInteger row2 = [pickerView selectedRowInComponent:1];
     LEDUnitModel *unit = [self.dataArr objectAtIndex:index];
     LEDUnitModel *subUnit = [unit.subDataArr objectAtIndex:row2];
-    self.unitSizeView.text = subUnit.title;
+    self.unitSizeView.text = [NSString stringWithFormat:@"  %@",subUnit.title];
     self.selectedSubUnit = subUnit;
 }
 
